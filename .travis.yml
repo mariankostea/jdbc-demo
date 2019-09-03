@@ -1,9 +1,8 @@
 language: java
 jdk:
-  - oraclejdk8
+  - oraclejdk11
 cache:
   directories:
     - $HOME/.m2
 before_install:
   - java -version
-  - sudo apt-get install jq
