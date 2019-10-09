@@ -17,7 +17,7 @@ public class DatasourceConfiguration {
 
     private static final String USER = "postgres";
 
-    private static final String PASSWORD = "*********";
+    private static final String PASSWORD = "Password123";
 
     static {
         Map<String, String> configurationProperties = Map.of("url", JDBC_URL,

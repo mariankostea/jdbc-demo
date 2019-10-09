@@ -31,27 +31,19 @@ public class Transaction {
             connection.setAutoCommit(false);
 
             insertStudent(connection);
-            simulateException();
+            //simulateException();
             insertAddress(connection);
 
-            //connection.commit();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-
-            //System.out.println("Rolling back...");
-            //connection.rollback();
-            /*} catch (SQLException ex) {
-                System.err.println(ex.getMessage());
-            }*/
-        } finally {
             connection.commit();
+        } catch (Exception e) {
+            System.out.println("Exception caught " + e.getMessage());
         }
     }
 
     private static void insertStudent(Connection connection) throws SQLException {
         String query = "INSERT INTO student (id, first_name, last_name, group_name) VALUES (?, ?, ?, ?)";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setInt(1, 10);
+            statement.setInt(1, 2);
             statement.setString(2, "John");
             statement.setString(3, "Snow");
             statement.setString(4, "TI-182");
