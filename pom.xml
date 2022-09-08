@@ -10,7 +10,7 @@
 
     <properties>
         <hikari.version>3.3.1</hikari.version>
-        <postgresql.version>42.2.6</postgresql.version>
+        <postgresql.version>42.4.1</postgresql.version>
         <java.version>11</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
